@@ -10,6 +10,10 @@ import UIKit
 
 class NearbyListTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var lblDistance: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var imgSp: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

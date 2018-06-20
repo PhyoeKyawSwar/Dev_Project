@@ -10,6 +10,8 @@ import UIKit
 
 class OpenTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var lblDay: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

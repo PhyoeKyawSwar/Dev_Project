@@ -1,21 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ReviewCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ReviewCollectionViewCell" id="gTV-IL-0wX" customClass="ReviewCollectionViewCell" customModule="NYA_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-8c-1WO">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dvu-xc-rEi">
+                        <rect key="frame" x="35" y="35" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="EDq-QX-rBC"/>
+                            <constraint firstAttribute="height" constant="30" id="FSZ-Cm-02i"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="dvu-xc-rEi" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="Cwv-78-ayp"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="5Et-8c-1WO" secondAttribute="bottom" id="Rf1-g5-095"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="5Et-8c-1WO" secondAttribute="trailing" id="X4s-M7-Onz"/>
+                <constraint firstItem="5Et-8c-1WO" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="f1d-dk-otX"/>
+                <constraint firstItem="5Et-8c-1WO" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="id9-gw-GLe"/>
+                <constraint firstItem="5Et-8c-1WO" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="nbR-JR-Zur"/>
+                <constraint firstItem="dvu-xc-rEi" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="pfS-Nq-TAA"/>
+                <constraint firstItem="5Et-8c-1WO" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" id="y6C-zl-RxN"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="imgAdd" destination="dvu-xc-rEi" id="2Er-SH-LfJ"/>
+                <outlet property="imgReview" destination="5Et-8c-1WO" id="xo2-xv-9s7"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>
